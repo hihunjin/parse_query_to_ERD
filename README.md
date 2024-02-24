@@ -3,7 +3,7 @@
 Sometimes, there are a bunch of SQL queries but don't exist ER Diagram. In this case, tracking table's relations and columns are difficult. This project helps to generate Entity Relationship Diagram, so called ER Diagram or ERD with some quries. Of course, queries doesn't show all the relationships between tables, so you can handle custom modification with this project.
 
 ## Sample Result
-[mermaid_result.html](mermaid_result.html)
+[output/mermaid_result.html](output/mermaid_result.html)
 ![sample_result](output/sample_result.png)
 
 
