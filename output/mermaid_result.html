@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mermaid Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+    mermaid.initialize({startOnLoad:true});
+    </script>
+</head>
+<body>
+
+<div class="mermaid">
+
+erDiagram
+ProductSales ||--o{ project_dataset_customers : SVC_ID
+ProductSales ||--o{ project_dataset_sales : SVC_ID
+ProductSales ||--o{ project_dataset_employees : SVC_ID
+ProductSales ||--o{ EmployeePerformance : SVC_ID
+ProductSales ||--o{ project_dataset_products : SVC_ID
+ProductSales ||--o{ CustomerSpending : SVC_ID
+project_dataset_customers ||--o{ project_dataset_sales : SVC_ID
+project_dataset_customers ||--o{ project_dataset_employees : SVC_ID
+project_dataset_customers ||--o{ EmployeePerformance : SVC_ID
+project_dataset_customers ||--o{ project_dataset_products : SVC_ID
+project_dataset_customers ||--o{ CustomerSpending : SVC_ID
+project_dataset_sales ||--o{ project_dataset_employees : SVC_ID
+project_dataset_sales ||--o{ EmployeePerformance : SVC_ID
+project_dataset_sales ||--o{ project_dataset_products : SVC_ID
+project_dataset_sales ||--o{ CustomerSpending : SVC_ID
+project_dataset_employees ||--o{ EmployeePerformance : SVC_ID
+project_dataset_employees ||--o{ project_dataset_products : SVC_ID
+project_dataset_employees ||--o{ CustomerSpending : SVC_ID
+EmployeePerformance ||--o{ project_dataset_products : SVC_ID
+EmployeePerformance ||--o{ CustomerSpending : SVC_ID
+project_dataset_products ||--o{ CustomerSpending : SVC_ID
+DepartmentSales ||--o{ project_dataset_departments : PRFL_ID
+ProductSales {        c4    int "info4"
+        c5 string "info5"
+SERVICE_ID string "info6"}
+project_dataset_customers {        c4    int "info4"
+        c5 string "info5"
+SERVICE_ID string "info6"}
+project_dataset_sales {        c4    int "info4"
+        c5 string "info5"
+SERVICE_ID string "info6"}
+project_dataset_employees {    c4    int "info4"
+    c5 string "info5"
+SVC_ID string "info6"}
+EmployeePerformance {    c4    int "info4"
+    c5 string "info5"
+SVC_ID string "info6"}
+project_dataset_categories {c1    int "info1"
+c2 string "info2"
+c3   date "info3"}
+project_dataset_products {    c4    int "info4"
+    c5 string "info5"
+SVC_ID string "info6"}
+DepartmentSales {     c4    int "info4"
+     c5 string "info5"
+PRFL_ID string "info6"}
+project_dataset_departments {     c4    int "info4"
+     c5 string "info5"
+PRFL_ID string "info6"}
+CustomerSpending {        c4    int "info4"
+        c5 string "info5"
+SERVICE_ID string "info6"}
+
+
+</div>
+
+</body>
+</html>
